@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+.tekst-animacija {
+    font-size: 40px;
+    text-align: center;
+    color: red;
+    opacity: 0; /* Početno stanje: nevidljivo */
+    animation: pojavi-i-boja 3s forwards; /* Pokreće animaciju */
+}
+
+@keyframes pojavi-i-boja {
+
+    0% {
+        opacity: 0;                 /* potpuno nevidljivo */
+        color: red;                 /* početna boja */
+        transform: translateY(-50px); /* pomak gore */
+    }
+
+    50% {
+        opacity: 0.5;               /* poluprovidno */
+        color: orange;              /* mijenja boju */
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 1;                 /* potpuno vidljivo */
+        color: green;               /* krajnja boja */
+        transform: translateY(0);
+    }
+}
