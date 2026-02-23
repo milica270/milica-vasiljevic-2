@@ -1,0 +1,38 @@
+.animirani {
+    display: inline-block;
+    border: 1px solid black;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    line-height: 20px;
+    transition: transform 0.3s ease;
+}
+
+.animirani:hover {
+    animation: animiraj-box 1s forwards;
+}
+
+@keyframes animiraj-box {
+
+    0% {
+        transform: rotate(0deg);
+        color: black;
+    }
+
+    45% {
+        transform: rotate(180deg);
+        color: red;
+    }
+
+    80% {
+        transform: rotate(270deg);
+        color: red;
+    }
+
+    100% {
+        transform: rotate(360deg);
+        color: black;
+    }
+}
